@@ -4,7 +4,7 @@ BUILD := ./build
 EXE := run
 
 CC := g++
-CFLAGS := -larmadillo -lmatplot
+CFLAGS := -larmadillo
 
 API_FILENAMES := graph_sequential layer_relu layer_leaky layer_sigmoid
 TEST_FILENAMES := test
