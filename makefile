@@ -3,7 +3,6 @@ TEST := ./test
 BUILD := ./build
 EXE := run
 
-
 CC := g++
 CFLAGS := -larmadillo -lmatplot
 
