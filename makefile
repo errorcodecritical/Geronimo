@@ -1,9 +1,11 @@
-CC := g++
-
-EXE := run
 LIB := ./lib
 TEST := ./test
 BUILD := ./build
+EXE := run
+
+
+CC := g++
+CFLAGS := -larmadillo -lmatplot
 
 API_FILENAMES := graph_sequential layer_relu layer_leaky layer_sigmoid
 TEST_FILENAMES := test
@@ -17,7 +19,7 @@ TEST_OBJS := $(patsubst $(TEST)/%.cpp, $(BUILD)/%.test.o, $(TEST_FILES))
 all: $(EXE)
 
 $(EXE) : $(API_OBJS) $(TEST_OBJS)
-	$(CC) -o $@ $^ -larmadillo -lmatplot
+	$(CC) -o $@ $^ $(CFLAGS)
 
 $(BUILD)/%.api.o : $(LIB)/%.cpp
 	$(CC) -c -o $@ $^ -I $(LIB)
