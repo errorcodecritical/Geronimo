@@ -1,6 +1,8 @@
 #include "graph_sequential.h"
 
-geronimo::graph::sequential::sequential() = default;
+geronimo::graph::sequential::sequential() {
+    arma::arma_rng::set_seed_random(); // Required for layer initialization;
+};
 
 geronimo::graph::sequential::~sequential() = default;
 

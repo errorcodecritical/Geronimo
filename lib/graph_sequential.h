@@ -26,7 +26,7 @@ namespace geronimo::graph {
         virtual arma::mat& predict(arma::mat inputs) override;
 
         /**
-         * @brief Perform training given sets of inputs and expected outputs. Calls optimization methods in reverse order (backpropagation).
+         * @brief Perform training given sets of inputs and expected outputs. Calls layer optimization methods in reverse order (backpropagation).
          * @param inputs Set of training inputs.
          * @param outputs Set of training outputs.
          * @param epochs Number of iterations to run optimization.

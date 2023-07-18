@@ -4,10 +4,10 @@ BUILD := ./build
 EXE := run
 
 CC := g++
-CFLAGS := -larmadillo
+CFLAGS := -larmadillo -lmatplot
 
 API_FILENAMES := graph_sequential layer_relu layer_leaky layer_sigmoid
-TEST_FILENAMES := test-matplot
+TEST_FILENAMES := example_matplot
 
 API_FILES := $(addsuffix .cpp, $(addprefix $(LIB)/, $(API_FILENAMES)))
 TEST_FILES := $(addsuffix .cpp, $(addprefix $(TEST)/, $(TEST_FILENAMES)))
